@@ -1,5 +1,4 @@
 import cfbd
-import pandas as pd
 from Tree import *
 from Team import *
 
@@ -75,9 +74,6 @@ class Calculator:
         masterTeams = []
         masterLogos = []
         perfList = []
-
-        pbp_req = []
-        pbp = pd.DataFrame()
 
         configuration = cfbd.Configuration()
         configuration.api_key['Authorization'] = 'INSERT_API_KEY_HERE'
