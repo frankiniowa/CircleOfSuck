@@ -11,7 +11,7 @@
   - anytree
   - cfbd
 - Request an API key from https://collegefootballdata.com/key
-- Replace the field in line 79 of Calculator.py with your API key
+- Add the API key as a parameter in your run configuration
 - Run main.py
 
 ## How to Use

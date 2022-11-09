@@ -1,3 +1,4 @@
+import sys
 import cfbd
 from Tree import *
 from Team import *
@@ -76,7 +77,7 @@ class Calculator:
         perfList = []
 
         configuration = cfbd.Configuration()
-        configuration.api_key['Authorization'] = 'INSERT_API_KEY_HERE'
+        configuration.api_key['Authorization'] = sys.argv[1]
         configuration.api_key_prefix['Authorization'] = 'Bearer'
 
         team_api_instance = cfbd.TeamsApi(cfbd.ApiClient(configuration))
