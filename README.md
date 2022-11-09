@@ -1,7 +1,7 @@
 # CircleOfSuck
 
 ## About
-This program is a GUI for calculating circles of suck specific to a user-defined conference, season, and size.
+This program is a GUI for calculating CFB circles of suck specific to a user-defined conference, season, and size.
 
 ## How to Prepare for First Run
 
