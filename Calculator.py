@@ -96,27 +96,28 @@ class Calculator:
             games = game_api_instance.get_games(year=year, conference=conf, team=i.name, season_type="regular")
             #games = games + game_api_instance.get_games(year=yr, conference="SEC", team=i.name, season_type="regular")
             for j in games:
-                if j.home_team == i.name:
-                    # if the team is the home team
-                    if j.home_points > j.away_points:
+                if j.home_points is not None:  # filter out games that haven't happened yet
+                    if j.home_team == i.name:
+                        # if the team is the home team
+                        if j.home_points > j.away_points:
 
-                        for k in masterTeams:
-                            if k.name == j.away_team:
-                                i.addDef(k)
+                            for k in masterTeams:
+                                if k.name == j.away_team:
+                                    i.addDef(k)
 
+                        else:
+                            for k in masterTeams:
+                                if k.name == j.away_team:
+                                    i.addLos(k)
                     else:
-                        for k in masterTeams:
-                            if k.name == j.away_team:
-                                i.addLos(k)
-                else:
-                    if j.home_points > j.away_points:
-                        for k in masterTeams:
-                            if k.name == j.home_team:
-                                i.addLos(k)
-                    else:
-                        for k in masterTeams:
-                            if k.name == j.home_team:
-                                i.addDef(k)
+                        if j.home_points > j.away_points:
+                            for k in masterTeams:
+                                if k.name == j.home_team:
+                                    i.addLos(k)
+                        else:
+                            for k in masterTeams:
+                                if k.name == j.home_team:
+                                    i.addDef(k)
 
             if i.lostTo.__len__() == 0 or i.defeated.__len__() == 0:
                 perfList.append(i)
