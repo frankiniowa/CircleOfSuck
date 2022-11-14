@@ -134,7 +134,7 @@ def goClicked():
 
 
 root = Tk()
-root.title("Circle of Suck")
+root.title("Circle of Suck Calculator")
 root.geometry("1250x750")
 
 today = datetime.date.today()
