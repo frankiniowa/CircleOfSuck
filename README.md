@@ -19,4 +19,5 @@ A GUI program for calculating circles of suck specific to a user-defined confere
 
 ## How to Use
 
-![image](https://user-images.githubusercontent.com/66658952/200226511-e388065a-0eb8-494a-b7fc-52d10db480b6.png)
+![image](https://user-images.githubusercontent.com/66658952/201770300-678b53cf-5cb1-42d2-9601-5cc319cf7255.png)
+
