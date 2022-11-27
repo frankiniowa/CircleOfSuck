@@ -40,7 +40,7 @@ def coordinates(iter, total):
     frac = iter / total
     x = R * np.sin(tau * frac) + c_x
     y = -R * np.cos(tau * frac) + c_y
-    phi = -frac * 360.0
+    phi = frac * 360.0
     return x, y, phi  # returns coordinates and rotation data for team icons and greater than symbol
 
 
@@ -67,7 +67,7 @@ def drawSuck(iter):
             xpos1, ypos1, _ = coordinates(i, ans[iter].__len__())
             xpos2, ypos2, ang = coordinates(i + 0.5, ans[iter].__len__())
             icon = getIcon(uDict[ans[iter][i]])
-            symbol = getSymbol("greater_than.png", ang)
+            symbol = getSymbol("greater_than.png", -ang)
             canvas.create_image(xpos1, ypos1, image=icon)
             canvas.create_image(xpos2, ypos2, image=symbol)
             canvas.images.append(symbol)
